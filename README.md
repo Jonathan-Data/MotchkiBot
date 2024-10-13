@@ -37,7 +37,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Support
 
 If you have any questions or need assistance, feel free to reach out to wave at wavevlr on discord.
-
----
-
-Feel free to customize the links and details as needed! Let me know if you need any more adjustments or additional sections.

@@ -1,2 +1,4 @@
-[2024-10-13 23:13:15] [INFO    ] discord.client: logging in using static token
-[2024-10-13 23:13:16] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e21c9f6663ab6523bf0d5b2b79044077).
+[2024-10-14 00:29:06] [INFO    ] discord.client: logging in using static token
+[2024-10-14 00:29:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 385c4f5e9972c2ac5c00dfe8cd66f323).
+[2024-10-14 00:29:16] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "dice" is not found

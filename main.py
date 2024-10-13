@@ -4,6 +4,8 @@ from discord.ext import commands
 import random
 # logging
 import logging
+# Tweety
+from tweety import Twitter
 
 # Token
 token = 'MTI5NTEyMDE2Mjc4OTUyMzUyNw.Gj66Wl.kgf7m1t3bQcxpnCZj57-6iPY0yO76enhCBhCXk'
@@ -53,8 +55,24 @@ async def repeat(ctx, times: int, content='repeating...'):
         await ctx.send(content)
 
 
-@bot.command() # Member joined
-async def joined(ctx, member: discord.Member):
-    await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
+@bot.event
+async def on_member_join(member):
+    channel = bot.get_channel(1295135393422901338)  
+    if channel is not None:  
+        await channel.send(f"Welcome @{member.display_name} to Motchki's Discord server!")
+
+#Tweety
+#username = ""
+#password = ""
+#app = Twitter("session")
+#app.sign_in(username, password)
+#target_username = "motchkii"
+
+#user = app.get_user_info(target_username)
+#all_tweets = app.get_tweets(user)
+
+#for tweet in all_tweets:
+#    channel = bot.get_channel("1295141061794205707")
+#    channel.send(tweet)
 
 bot.run(token, log_handler=handler)

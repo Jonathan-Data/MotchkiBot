@@ -1,0 +1,51 @@
+{
+    "cookies": "kdt=ObAgDDWzjAXdhdJe91YoD3kzgDFyBpT80wMzHa5e;twid=\"u=1267482672206688258\";ct0=7d054f7cd0fb546b788686277c511611;auth_token=ae0e217f65ff5924ce15d5cc5acfc4763ab1e347;",
+    "user": {
+        "id": "1267482672206688258",
+        "rest_id": "1267482672206688258",
+        "created_at": "2020-06-01 15:46:48+00:00",
+        "date": "2020-06-01 15:46:48+00:00",
+        "entities": {
+            "description": {
+                "urls": []
+            }
+        },
+        "description": "22 | adderall abuser",
+        "bio": "22 | adderall abuser",
+        "fast_followers_count": "0",
+        "favourites_count": "173",
+        "followers_count": "1150",
+        "friends_count": "92",
+        "has_custom_timelines": "True",
+        "is_translator": "False",
+        "listed_count": "1",
+        "location": "\ud83c\udde9\ud83c\uddea",
+        "media_count": "2",
+        "name": "Holy",
+        "normal_followers_count": "1150",
+        "subscriptions_count": "0",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1267482672206688258/1729038464",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1846348817026727937/uoEM2a8E_normal.jpg",
+        "profile_interstitial_type": null,
+        "protected": "False",
+        "screen_name": "h360728",
+        "username": "h360728",
+        "statuses_count": "13",
+        "translator_type": "none",
+        "verified": "False",
+        "can_dm": "True",
+        "following": "False",
+        "followed_by": "False",
+        "community_role": null,
+        "notifications_enabled": "False",
+        "notifications": "False",
+        "possibly_sensitive": "False",
+        "pinned_tweets": [
+            "1604544524151271425"
+        ],
+        "profile_url": "https://twitter.com/h360728",
+        "is_blocked": "False",
+        "blocked_by": "False",
+        "has_blocked_me": "False"
+    }
+}

@@ -5,34 +5,27 @@ import logging
 from tweety import Twitter
 import asyncio
 
-# Token
-token = 'MTI5NTEyMDE2Mjc4OTUyMzUyNw.GYZ1gv.FshLGWUCDvkmvacA27kpXZWLAzQCBY5zJm4VJA'
-
-# Main
+token = ''
 intents = discord.Intents.default()
 intents.typing = False
 intents.presences = False
 intents.message_content = True
 intents.members = True
-
 bot = commands.Bot(command_prefix='?', intents=intents)
-
-# Logging
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 logger = logging.getLogger('discord')
 logger.setLevel(logging.INFO)
 logger.addHandler(handler)
-
 last_tweet_id = None  # Global variable to keep track of the last tweet ID
 
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     print('------')
-    await send_tweets()  # Call the async function to send tweets
+    await send_tweets()
 
 async def send_tweets():
-    global last_tweet_id  # Declare as global to modify the variable
+    global last_tweet_id
     username = ""
     password = ""
     
@@ -42,21 +35,20 @@ async def send_tweets():
         app.sign_in(username, password)
     except Exception as e:
         print(f"Login failed: {e}")
-        return  # Exit the function if login fails
+        return
     
-    target_username = "Motchkii"
+    target_username = ""
     user = app.get_user_info(target_username)
     all_tweets = app.get_tweets(user)
 
-    channel = bot.get_channel(1295141061794205707)  # Replace with your channel ID
+    channel = bot.get_channel(1295141061794205707)
 
     for tweet in all_tweets:
         try:
-            # Check if the tweet is a standard tweet
             if hasattr(tweet, 'id'):
-                tweet_id = tweet.id if isinstance(tweet.id, int) else int(tweet.id)  # Ensure tweet.id is an int
+                tweet_id = tweet.id if isinstance(tweet.id, int) else int(tweet.id) 
                 if last_tweet_id is None or tweet_id > last_tweet_id:
-                    last_tweet_id = tweet_id  # Update the last tweet ID
+                    last_tweet_id = tweet_id 
                     tweet_link = f"https://twitter.com/{tweet.author.username}/status/{tweet_id}"
                     print(f"Sending tweet link: {tweet_link}")
                     await channel.send(tweet_link)
@@ -68,11 +60,11 @@ async def send_tweets():
         except Exception as e:
             print(f"Failed to send message: {e}")
 
-@bot.command()  # Adds two numbers together
+@bot.command()
 async def add(ctx, left: int, right: int):
     await ctx.send(left + right)
 
-@bot.command()  # Dice
+@bot.command()
 async def roll(ctx, dice: str):
     try:
         rolls, limit = map(int, dice.split('d'))
@@ -87,7 +79,7 @@ async def roll(ctx, dice: str):
 async def choose(ctx, *choices: str):
     await ctx.send(random.choice(choices))
 
-@bot.command()  # Repeats message
+@bot.command()
 async def repeat(ctx, times: int, content='repeating...'):
     for i in range(times):
         await ctx.send(content)

@@ -33,8 +33,8 @@ async def on_ready():
 
 async def send_tweets():
     global last_tweet_id  # Declare as global to modify the variable
-    username = "h360728"
-    password = "gf7j3P7behG3."
+    username = ""
+    password = ""
     
     app = Twitter("session")
     
